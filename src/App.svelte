@@ -1,23 +1,11 @@
 <script lang="ts">
-  import Tailwindcss from "./Tailwindcss.svelte";
-  export let name: string;
+  import Footer from "./Footer.svelte";
+  import Tailwind from "./Tailwind.svelte";
 </script>
 
-<Tailwindcss />
-<main class="p-4 mx-auto text-center max-w-xl">
-  <h1 class="uppercase text-6xl leading-normal font-thin text-svelte">
-    Hello {name}!
-  </h1>
-  <p class="custom-style">
-    Visit the
-    <a href="https://svelte.dev/tutorial" class="text-blue-500 underline"
-      >Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+<Tailwind />
+<main>
+  <Footer />
 </main>
 
-<style>
-  .custom-style {
-    @apply italic;
-  }
-</style>
+<style></style>
