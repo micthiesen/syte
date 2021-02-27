@@ -1,6 +1,5 @@
 <script lang="ts">
-	import ModeSwitcher from './ModeSwitcher.svelte';
-	import Tailwindcss from './Tailwindcss.svelte';
+	import "smelte/src/tailwind.css";
 	export let name: string;
 </script>
 <style>
@@ -8,8 +7,6 @@
 		@apply italic;
 	}
 </style>
-<Tailwindcss />
-<ModeSwitcher />
 <main class="p-4 mx-auto text-center max-w-xl">
 	<h1 class="uppercase text-6xl leading-normal font-thin text-svelte">Hello {name}!</h1>
 	<p class="custom-style">

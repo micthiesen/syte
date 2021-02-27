@@ -1,11 +1,11 @@
-import svelte from "rollup-plugin-svelte";
-import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
-import { terser } from "rollup-plugin-terser";
+import resolve from "@rollup/plugin-node-resolve";
+import smelte from "smelte/rollup-plugin-smelte";
+import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
-import css from "rollup-plugin-css-only";
+import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -44,42 +44,44 @@ export default {
   },
   plugins: [
     svelte({
-      // enable run-time checks when not in production
-      compilerOptions: {
-        dev: !production,
+      compilerOptions: { dev: !production },
+      preprocess: sveltePreprocess(),
+    }),
+    smelte({
+      purge: production,
+      output: "public/build/bundle.css",
+      postcss: [],
+      whitelist: [],
+      whitelistPatterns: [],
+      tailwind: {
+        theme: {
+          extend: {
+            spacing: {
+              72: "18rem",
+              84: "21rem",
+              96: "24rem",
+            },
+          },
+        },
+        colors: {
+          primary: "#b027b0",
+          secondary: "#009688",
+          error: "#f44336",
+          success: "#4caf50",
+          alert: "#ff9800",
+          blue: "#2196f3",
+          dark: "#212121",
+        },
+        darkMode: true,
       },
-      preprocess: sveltePreprocess({
-        postcss: true,
-      }),
     }),
-    // we'll extract any component CSS out into
-    // a separate file - better for performance
-    css({ output: "bundle.css" }),
-    // If you have external dependencies installed from
-    // npm, you'll most likely need these plugins. In
-    // some cases you'll need additional configuration -
-    // consult the documentation for details:
-    // https://github.com/rollup/plugins/tree/master/packages/commonjs
-    resolve({
-      browser: true,
-      dedupe: ["svelte"],
-    }),
+    resolve({ browser: true, dedupe: ["svelte"] }),
     commonjs(),
     typescript({ sourceMap: !production }),
 
-    // In dev mode, call `npm run start` once
-    // the bundle has been generated
     !production && serve(),
-
-    // Watch the `public` directory and refresh the
-    // browser on changes when not in production
     !production && livereload("public"),
-
-    // If we're building for production (npm run build
-    // instead of npm run dev), minify
     production && terser(),
   ],
-  watch: {
-    clearScreen: false,
-  },
+  watch: { clearScreen: false },
 };
