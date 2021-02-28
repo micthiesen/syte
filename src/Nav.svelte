@@ -11,8 +11,8 @@
   </span>
   <div class="self-start ml-1 flex flex-wrap text-1xl uppercase text-gray-300">
     <span class="ml-3"
-      ><Link16 class="inline-block transform -translate-y-0.5" /> Coding Stuff</span>
+      ><Link16 class="inline-block transform -translate-y-0.5" /> Code</span>
     <span class="ml-3"
-      ><Link16 class="inline-block transform -translate-y-0.5" /> Musical Musings</span>
+      ><Link16 class="inline-block transform -translate-y-0.5" /> Music</span>
   </div>
 </nav>
