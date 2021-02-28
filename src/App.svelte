@@ -1,8 +1,9 @@
 <script lang="ts">
+  import Construction32 from "carbon-icons-svelte/lib/Construction32";
   import Footer from "./Footer.svelte";
   import Nav from "./Nav.svelte";
   import Tailwind from "./Tailwind.svelte";
-  import Construction32 from "carbon-icons-svelte/lib/Construction32";
+  import Test from "./Test.svx";
 </script>
 
 <Tailwind />
@@ -13,6 +14,7 @@
     <div>
       <Construction32 class="h-48 w-48 ml-auto mr-auto" />
       <h1 class="text-lg text-center">WIP :)</h1>
+      <Test />
     </div>
   </div>
   <Footer />

@@ -29,6 +29,9 @@
       "editor.formatOnSave": true,
       "editor.formatOnType": false
     },
-    "eslint.validate": ["javascript", "svelte"]
+    "eslint.validate": ["javascript", "svelte"],
+    "files.associations": {
+      "*.svx": "markdown"
+    }
   }
 }

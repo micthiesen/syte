@@ -6,6 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import preprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import css from "rollup-plugin-css-only";
+import { mdsvex } from "mdsvex";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -45,7 +46,8 @@ export default {
   plugins: [
     svelte({
       compilerOptions: { dev: !production },
-      preprocess: preprocess({ postcss: true }),
+      extensions: [".svelte", ".svx"],
+      preprocess: [mdsvex(), preprocess({ postcss: true })],
     }),
     css({ output: "bundle.css" }),
     resolve({ browser: true, dedupe: ["svelte"] }),
