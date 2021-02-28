@@ -9,6 +9,7 @@ module.exports = {
     ],
     enabled: isProduction,
   },
+  theme: {},
   variants: {},
   plugins: [],
 };

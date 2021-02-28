@@ -5,25 +5,27 @@
 </script>
 
 <Tailwind />
-<main class="flex flex-col h-screen">
+<main class="flex flex-col h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
   <Nav title="Pretend Title Quite Longs YESSSSS" />
   <div class="flex-grow">
-    <div class="px-4">
-      <h1>Pretend Title</h1>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-      <p>This is some pretend content</p>
-    </div>
+    <p class="mb-4">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </p>
+    <p class="mb-4">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </p>
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </p>
   </div>
   <Footer />
 </main>
