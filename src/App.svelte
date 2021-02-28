@@ -7,5 +7,3 @@
 <main>
   <Footer />
 </main>
-
-<style></style>
