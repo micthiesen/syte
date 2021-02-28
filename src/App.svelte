@@ -5,7 +5,8 @@
 </script>
 
 <Tailwind />
-<main class="flex flex-col h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
+<main
+  class="flex flex-col min-h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
   <Nav title="Pretend Title Quite Longs YESSSSS" />
   <div class="flex-grow">
     <p class="mb-4">
