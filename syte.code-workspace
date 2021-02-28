@@ -28,6 +28,7 @@
       "editor.formatOnPaste": false,
       "editor.formatOnSave": true,
       "editor.formatOnType": false
-    }
+    },
+    "eslint.validate": ["javascript", "svelte"]
   }
 }
