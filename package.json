@@ -1,6 +1,7 @@
 {
   "name": "micthiesen-syte",
   "version": "0.1.1",
+  "private": true,
   "scripts": {
     "build": "rollup --config",
     "dev": "rollup --config --watch",
