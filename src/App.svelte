@@ -2,10 +2,8 @@
   import Construction32 from "carbon-icons-svelte/lib/Construction32";
   import Footer from "./Footer.svelte";
   import Nav from "./Nav.svelte";
-  import Tailwind from "./Tailwind.svelte";
 </script>
 
-<Tailwind />
 <main
   class="flex flex-col min-h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
   <Nav title={null} />
