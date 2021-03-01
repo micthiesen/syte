@@ -1,5 +1,6 @@
 {
   "private": true,
+  "lockfileVersion": 1,
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
@@ -10,7 +11,8 @@
     "lint:svelte": "svelte-check"
   },
   "dependencies": {
-    "svelte": "^3.32.1"
+    "svelte": "^3.32.1",
+    "svelte-routing": "^1.5.0"
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "^2.0.5",

@@ -10,10 +10,7 @@ module.exports = {
     "@snowpack/plugin-typescript",
     "@snowpack/plugin-postcss",
   ],
-  routes: [
-    /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  routes: [{ match: "routes", src: ".*", dest: "/index.html" }],
   optimize: {
     bundle: true,
     minify: true,
