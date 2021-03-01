@@ -3,6 +3,7 @@
   import Footer from "./Footer.svelte";
   import Nav from "./Nav.svelte";
   import Tailwind from "./Tailwind.svelte";
+  import Test from "Test.svx";
 </script>
 
 <Tailwind />
@@ -14,6 +15,7 @@
       <Construction32 class="h-48 w-48 ml-auto mr-auto" />
       <h1 class="text-lg text-center">WIP :)</h1>
     </div>
+    <Test />
   </div>
   <Footer />
 </main>
