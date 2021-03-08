@@ -14,7 +14,7 @@ module.exports = {
   optimize: {
     bundle: true,
     minify: true,
-    target: "es2018",
+    target: "es2020",
   },
   packageOptions: {
     /* ... */
