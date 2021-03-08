@@ -1,5 +1,3 @@
-const isProduction = !process.env.ROLLUP_WATCH;
-
 module.exports = {
   purge: {
     content: ["./src/**/*.svelte", "./src/**/*.html", "./public/**/*.html"],
@@ -7,7 +5,7 @@ module.exports = {
       ...(content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []),
       ...(content.match(/(?<=class:)[^=>\/\s]*/g) || []),
     ],
-    enabled: isProduction,
+    enabled: process.env.NODE_ENV === "production",
   },
   theme: {},
   variants: {},

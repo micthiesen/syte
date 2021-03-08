@@ -6,6 +6,7 @@
     "target": "esnext",
     "noEmit": true,
     "types": ["svelte", "@types/snowpack-env"],
+    "typeRoots": ["./types", "./node_modules"],
     "strict": true,
     "resolveJsonModule": true,
     "useDefineForClassFields": true
