@@ -1,27 +1,17 @@
 <script lang="ts">
-  import { Router, Link, Route } from "svelte-routing";
   import Footer from "./layout/Footer.svelte";
   import Nav from "./layout/Nav.svelte";
-  import Code from "./routes/Code.svelte";
-  import Home from "./routes/Home.svelte";
-  import Music from "./routes/Music.svelte";
-
-  let url = "";
-  let title = "";
-  const setTitle = (value: string) => {
-    title = value;
-  };
+  import Construction32 from "carbon-icons-svelte/lib/Construction32";
 </script>
 
-<Router {url}>
-  <main
-    class="flex flex-col min-h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
-    <Nav {title} />
-    <div class="flex-grow flex flex-col">
-      <Route path="code"><Code {setTitle} /></Route>
-      <Route path="music"><Music {setTitle} /></Route>
-      <Route path="/"><Home {setTitle} /></Route>
+<main
+  class="flex flex-col min-h-screen max-w-4xl mx-auto bg-gray-800 px-7 py-5">
+  <Nav title={""} />
+  <div class="flex-grow flex flex-col">
+    <div class="flex-grow flex flex-col justify-center">
+      <Construction32 class="h-48 w-48 ml-auto mr-auto" />
+      <h1 class="text-lg text-center">WIP :)</h1>
     </div>
-    <Footer />
-  </main>
-</Router>
+  </div>
+  <Footer />
+</main>
